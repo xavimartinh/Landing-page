@@ -1,0 +1,307 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*Header*/
+header{
+    height:100px;
+    background: #383843;
+    padding: 0px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: #4499b0;
+    font-weight: 250;
+}
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+
+.veure-menu,
+.amagar-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+.veure-menu{
+    order:1;
+}
+
+.menu a:hover,
+.veure-menu:hover,
+.amagar-menu:hover{
+    color:aquamarine;
+}
+
+#check{
+    display: none;
+}
+
+/*banner*/
+#banner{
+    padding: 0 50px;
+    background-image: url(./imatges/banner.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contingut-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contingut-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contingut-banner h3 span{
+    font-weight: 600;
+}
+
+.boto-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #4499b0;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.3s;
+}
+
+.boto-empezar:hover{
+    background: #4499b0;
+}
+
+/*tour*/
+#tour{
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#tour img{
+    width: 522px;
+}
+
+#tour div{
+    padding: 10px 10px;
+}
+
+#tour h4{
+    color: #000;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#musica{
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#musica img {
+    width: 40vh;
+}
+
+#musica div{
+    padding: 10px 10px;
+}
+
+#musica h4{
+    color: #000;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#merchandise{
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#merchandise img{
+    width: 40vh;
+}
+
+#merchandise div{
+    padding: 10px 10px;
+}
+
+#merchandise h4{
+    color: #000;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+/*formulari*/
+#contacto{
+    background-color: #4499b0;
+    padding: 50px 0px;
+    color: #fff;
+}
+
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#contacto form{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.datos-form{
+    display: flex;
+}
+
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea{
+    background-color: #4D4D5C;
+    border-radius: 5px;
+    border: 2px solid #4499b0;
+    padding: 10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    border-color: #4499b0;
+    box-shadow: 0 0 0 2px #4499b0;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+    color: #fff;
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boto-formulari .boto-enviar{
+    display: block;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.boto-formulari .boto-enviar:hover{
+    background: #4499b0;
+}
+
+.mapa{
+    padding: 50px 0px;
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    background: #383843;
+    color: rgb(86, 86, 86);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+/*responsive*/
+@media(max-width: 768px){
+    /*header*/
+    .veure-menu,
+    .amagar-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .amagar-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right:0;
+
+    }
+
+    /*tour*/
+    #tour{
+        flex-direction: column;
+    }
+
+    /*musica*/
+    #musica{
+        flex-direction: column;
+    }
+
+    /*merchandise*/
+    #merchandise{
+        flex-direction: column;
+    }
+
+
+    /*formulari*/
+    .datos-form{
+        flex-direction: column;
+    }
+
+}
